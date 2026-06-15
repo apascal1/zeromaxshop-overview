@@ -35,7 +35,7 @@ Resend API, Railway, Backblaze B2
 Stripe webhook handler — verifies signatures, prevents duplicate event 
 processing, creates orders on successful payment, and alerts admins if 
 a payment succeeds but order creation fails:
-
+```
 @app.route("/stripe/webhook", methods=["POST"])
 @csrf.exempt
 def stripe_webhook():
